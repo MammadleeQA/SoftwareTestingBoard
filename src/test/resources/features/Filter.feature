@@ -1,4 +1,4 @@
-Feature: Sign in
+Feature: Filter
 
   Background:
     Given Go to "https://magento.softwaretestingboard.com/" page
