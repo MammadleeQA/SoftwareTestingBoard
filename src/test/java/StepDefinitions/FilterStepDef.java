@@ -6,9 +6,9 @@ import io.cucumber.java.en.Given;
 import static DriverHook.DriverConfig.driver;
 import static POM.ConditionOptionEnum.CLICKABLE;
 import static POM.ConditionOptionEnum.VISIBLE;
-import static POM.SignInPOM.*;
+import static POM.FilterPOM.*;
 
-public class SignInStepDef extends BaseMethods {
+public class FilterStepDef extends BaseMethods {
 
     @Given("Go to {string} page")
     public void goToPage(String url) {

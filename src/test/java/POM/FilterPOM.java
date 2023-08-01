@@ -2,7 +2,7 @@ package POM;
 
 import org.openqa.selenium.By;
 
-public class SignInPOM {
+public class FilterPOM {
     public static final By SIGN_IN_LINK = By.xpath("(//a[contains(text(),'Sign In')])[1]");
     public static final By LOGIN_USERNAME_INPUT = By.cssSelector("input[name='login[username]']");
     public static final By LOGIN_PASSWORD_INPUT = By.cssSelector("input[name='login[password]']");
