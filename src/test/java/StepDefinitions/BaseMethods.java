@@ -51,4 +51,9 @@ public abstract class BaseMethods {
             case CLICKABLE -> wait.until(ExpectedConditions.elementToBeClickable(locator));
         }
     }
+
+    public WebElement general(By locator){
+
+        return driver.findElement(locator);
+    }
 }
