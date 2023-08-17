@@ -2,6 +2,9 @@ package StepDefinitions;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import org.junit.Assert;
+import org.openqa.selenium.remote.http.Message;
 
 import static DriverHook.DriverConfig.driver;
 import static POM.ConditionOptionEnum.CLICKABLE;
@@ -31,6 +34,6 @@ public class FilterStepDef extends BaseMethods {
         explicitlyWait(LOGGED_IN, VISIBLE, 10);
     }
 
-
 }
+
 
