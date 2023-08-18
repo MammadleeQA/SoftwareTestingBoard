@@ -24,24 +24,30 @@ public class OrderStepDef extends BaseMethods {
         explicitlyWait(menbtn, CLICKABLE,10);
         getElement(menbtn).click();
     }
-    @When("Click men's tops button")
+    @Then("Click men's tops button")
     public void mentopsclick(){
         explicitlyWait(tops, CLICKABLE,10);
         getElement(tops).click();
     }
-    @When("Click first picture")
+    @And("Click first picture")
     public void menspic(){
         explicitlyWait(firststpic, CLICKABLE,10);
         getElement(firststpic).click();
     }
-    @When("Scroll")
+    @And("Select size S")
+    public void sizes(){
+        explicitlyWait(sizeS, CLICKABLE,10);
+        getElement(sizeS).click();
+    }
+    @And("Scroll")
     public void scrolling(){
         scrollByWeb(0,250);
     }
-    @When("Scroll 300")
+    @And("Scroll 1250")
     public void scrollingmore(){
-        scrollByWeb(0,300);
+        scrollByWeb(0,1250);
     }
+
 
     @And("{int} seconds wait")
     public void secondssWait(int seconds) {
