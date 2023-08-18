@@ -34,10 +34,10 @@ public class OrderStepDef extends BaseMethods {
         explicitlyWait(firststpic, CLICKABLE,10);
         getElement(firststpic).click();
     }
-    @And("Select size S")
+    @And("Click to button add to cart")
     public void sizes(){
-        explicitlyWait(sizeS, CLICKABLE,10);
-        getElement(sizeS).click();
+        explicitlyWait(addtocart, CLICKABLE,10);
+        getElement(addtocart).click();
     }
     @And("Scroll")
     public void scrolling(){
@@ -47,8 +47,42 @@ public class OrderStepDef extends BaseMethods {
     public void scrollingmore(){
         scrollByWeb(0,1250);
     }
+    @And("Select {string} size")
+    public void selectGender(String size) {
+        switch (size) {
+            case "XS": {
+                explicitlyWait(sizexs, CLICKABLE,10);
+                getElement(sizexs).click();
+                break;
+            }
+            case "S": {
+                explicitlyWait(sizes, CLICKABLE,10);
+                getElement(sizes).click();
+                break;
+            }
+            case "M": {
+                explicitlyWait(sizem, CLICKABLE,10);
+                getElement(sizem).click();
+                break;
+            }
+            case "L": {
+                explicitlyWait(sizel, CLICKABLE,10);
+                getElement(sizel).click();
+                break;
+            }
+            case "XL": {
+                explicitlyWait(sizexl, CLICKABLE,10);
+                getElement(sizexl).click();
+                break;
+            }
+        }
+    }
+    @Then("Check the {string} should be displayed")
+    public void checkTheShouldBeDisplayed(String errorMessage) {
+        explicitlyWait(ErrMsj, VISIBLE,10);
+        Assert.assertEquals(errorMessage,getElement(ErrMsj).getText());
 
-
+    }
     @And("{int} seconds wait")
     public void secondssWait(int seconds) {
         secondsWait(seconds);
