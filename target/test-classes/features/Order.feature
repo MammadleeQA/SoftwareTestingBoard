@@ -8,6 +8,6 @@ Feature: Order
       When Click men's tops button
       When Scroll
       When Click first picture
-      When Scroll
+      When Scroll 
       Then 3 seconds wait
 
