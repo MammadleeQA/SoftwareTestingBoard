@@ -24,10 +24,11 @@ public class OrderPOM {
     public static final By white = By.cssSelector("div[option-label='White']");
     public static final By blue = By.cssSelector("div[option-label='Blue']");
     public static final By black = By.cssSelector("div[option-label='Black']");
+    public static final By green = By.cssSelector("div[option-label='Green']");
+    public static final By purple = By.cssSelector("div[option-label='Purple']");
     public static final By basket = By.cssSelector("a[href='https://magento.softwaretestingboard.com/checkout/cart/']");
     public static final By viewbasket = By.xpath("(//span[text()='View and Edit Cart'])");
-
-
+    public static final By succesmsj = By.cssSelector("a[href='https://magento.softwaretestingboard.com/checkout/cart/']");
 
 
 

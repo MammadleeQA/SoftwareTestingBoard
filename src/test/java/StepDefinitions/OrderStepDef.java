@@ -65,8 +65,8 @@ public class OrderStepDef extends BaseMethods {
         explicitlyWait(basket, CLICKABLE,10);
         getElement(basket).click();
     }
-    @And("Click to viewbasket")
-    public void viewbasket(){
+    @And("Click to view basket")
+    public void viewbasket1(){
         explicitlyWait(viewbasket, CLICKABLE,10);
         getElement(viewbasket).click();
     }
@@ -133,6 +133,16 @@ public class OrderStepDef extends BaseMethods {
                 getElement(black).click();
                 break;
             }
+            case "green": {
+                explicitlyWait(green, CLICKABLE, 10);
+                getElement(green).click();
+                break;
+            }
+            case "purple": {
+                explicitlyWait(purple, CLICKABLE, 10);
+                getElement(purple).click();
+                break;
+            }
         }
     }
             @Then("Check the {string} for size should be displayed")
@@ -145,6 +155,12 @@ public class OrderStepDef extends BaseMethods {
     public void checkTheShouldBeDisplayed2(String errorMessage) {
         explicitlyWait(ErrMsj2, VISIBLE,10);
         Assert.assertEquals(errorMessage,getElement(ErrMsj2).getText());
+
+    }
+    @Then("Check the {string} for success should be displayed")
+    public void checkTheShouldBeDisplayed3(String success) {
+        explicitlyWait(succesmsj, VISIBLE,10);
+        Assert.assertEquals(success,getElement(succesmsj).getText());
 
     }
     @And("{int} seconds wait")
