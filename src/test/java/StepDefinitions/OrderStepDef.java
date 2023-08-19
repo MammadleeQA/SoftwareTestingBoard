@@ -34,6 +34,11 @@ public class OrderStepDef extends BaseMethods {
         explicitlyWait(firststpic, CLICKABLE,10);
         getElement(firststpic).click();
     }
+    @And("Click second picture")
+    public void menspic2(){
+        explicitlyWait(secondpic, CLICKABLE,10);
+        getElement(secondpic).click();
+    }
     @And("Click to button add to cart")
     public void sizes(){
         explicitlyWait(addtocart, CLICKABLE,10);
@@ -48,7 +53,7 @@ public class OrderStepDef extends BaseMethods {
         scrollByWeb(0,1250);
     }
     @And("Select {string} size")
-    public void selectGender(String size) {
+    public void selectsize(String size) {
         switch (size) {
             case "XS": {
                 explicitlyWait(sizexs, CLICKABLE,10);
@@ -77,10 +82,47 @@ public class OrderStepDef extends BaseMethods {
             }
         }
     }
-    @Then("Check the {string} should be displayed")
+
+    @And("Select {string} colour")
+    public void selectcolour(String colour) {
+        switch (colour) {
+            case "red": {
+                explicitlyWait(red, CLICKABLE, 10);
+                getElement(red).click();
+                break;
+            }
+            case "white": {
+                explicitlyWait(white, CLICKABLE, 10);
+                getElement(white).click();
+                break;
+            }
+            case "blue": {
+                explicitlyWait(blue, CLICKABLE, 10);
+                getElement(blue).click();
+                break;
+            }
+            case "gray": {
+                explicitlyWait(gray, CLICKABLE, 10);
+                getElement(gray).click();
+                break;
+            }
+            case "black": {
+                explicitlyWait(black, CLICKABLE, 10);
+                getElement(black).click();
+                break;
+            }
+        }
+    }
+            @Then("Check the {string} for size should be displayed")
     public void checkTheShouldBeDisplayed(String errorMessage) {
         explicitlyWait(ErrMsj, VISIBLE,10);
         Assert.assertEquals(errorMessage,getElement(ErrMsj).getText());
+
+    }
+    @Then("Check the {string} for colour should be displayed")
+    public void checkTheShouldBeDisplayed2(String errorMessage) {
+        explicitlyWait(ErrMsj2, VISIBLE,10);
+        Assert.assertEquals(errorMessage,getElement(ErrMsj2).getText());
 
     }
     @And("{int} seconds wait")
