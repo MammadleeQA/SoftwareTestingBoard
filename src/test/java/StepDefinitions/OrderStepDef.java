@@ -24,10 +24,21 @@ public class OrderStepDef extends BaseMethods {
         explicitlyWait(menbtn, CLICKABLE,10);
         getElement(menbtn).click();
     }
+    @When("Click women button")
+    public void womenclick(){
+        explicitlyWait(womenbtn, CLICKABLE,10);
+        getElement(womenbtn).click();
+    }
+
     @Then("Click men's tops button")
     public void mentopsclick(){
         explicitlyWait(tops, CLICKABLE,10);
         getElement(tops).click();
+    }
+    @Then("Click women's jackets button")
+    public void womenjacketsclick(){
+        explicitlyWait(jackets, CLICKABLE,10);
+        getElement(jackets).click();
     }
     @And("Click first picture")
     public void menspic(){
@@ -39,18 +50,29 @@ public class OrderStepDef extends BaseMethods {
         explicitlyWait(secondpic, CLICKABLE,10);
         getElement(secondpic).click();
     }
+    @And("Click third picture")
+    public void womenthird(){
+        explicitlyWait(thirdpic, CLICKABLE,10);
+        getElement(thirdpic).click();
+    }
     @And("Click to button add to cart")
     public void sizes(){
         explicitlyWait(addtocart, CLICKABLE,10);
         getElement(addtocart).click();
     }
-    @And("Scroll")
-    public void scrolling(){
-        scrollByWeb(0,250);
+    @And("Click to basket")
+    public void basket(){
+        explicitlyWait(basket, CLICKABLE,10);
+        getElement(basket).click();
     }
-    @And("Scroll 1250")
-    public void scrollingmore(){
-        scrollByWeb(0,1250);
+    @And("Click to viewbasket")
+    public void viewbasket(){
+        explicitlyWait(viewbasket, CLICKABLE,10);
+        getElement(viewbasket).click();
+    }
+    @And("Scroll {int}")
+    public void scrolling(int num){
+        scrollByWeb(0,num);
     }
     @And("Select {string} size")
     public void selectsize(String size) {

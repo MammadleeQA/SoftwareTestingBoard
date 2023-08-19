@@ -9,12 +9,12 @@ Feature: Order
       Then Click men's tops button
       And Scroll 1250
       And Click first picture
-      And Scroll
+      And Scroll 250
       And Select "<size>" size
       And Click to button add to cart
       And 3 seconds wait
       Then Check the "This is a required field." for size should be displayed
-
+      
       Examples:
         | credentials         | size |
         | when size is xs     |   XS |
@@ -29,7 +29,7 @@ Feature: Order
     Then Click men's tops button
     And Scroll 1250
     And Click second picture
-    And Scroll
+    And Scroll 250
     And Select "<colour>" colour
     And Click to button add to cart
     And 3 seconds wait
@@ -41,3 +41,22 @@ Feature: Order
       | when colour is blue  | gray   |
 
 
+  Scenario Outline: Trying add to card item with selected colour and selected size
+    Given I am in maestro page
+    When Click women button
+    Then Click women's jackets button
+    And Scroll <num>
+    And Click third picture
+    And Scroll <num1>
+    And Select "<colour>" colour
+    And Select "<size>" size
+    And Click to button add to cart
+    And Scroll <num2>
+    And Click to basket
+    And <num3> seconds wait
+    And Click to viewbasket
+    And <seconds> seconds wait
+
+    Examples:
+      | num | num1 | colour   | size  | seconds | num2 | num3|
+      | 350 | 230  | blue     |   M   |    3    | -350 |  2  |
