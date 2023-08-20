@@ -31,10 +31,10 @@ public class OrderPOM {
     public static final By basket = By.cssSelector("a[href='https://magento.softwaretestingboard.com/checkout/cart/']");
     public static final By viewbasket = By.xpath("(//span[text()='View and Edit Cart'])");
     public static final By succesmsj = By.cssSelector("div[data-bind=\"html: $parent.prepareMessageForHtml(message.text)\"]");
-//    public static final By updatefourth = By.xpath("(//span[text()='Edit'])");
     public static final By updatcart = By.xpath("(//span[text()='Update Cart'])");
     public static final By updatefourth = By.xpath("//a[@class='action action-edit' and @title='Edit item parameters']");
     public static final By removefourth = By.xpath("//a[@class='action action-delete' and @title='Remove item']");
+    public static final By succesmsj2 = By.cssSelector("div[class='cart-empty']");
 
 
 

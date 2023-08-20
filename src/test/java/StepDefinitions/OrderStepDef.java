@@ -188,6 +188,12 @@ public class OrderStepDef extends BaseMethods {
         Assert.assertEquals(success,getElement(succesmsj).getText());
 
     }
+    @Then("Check the {string} for success 2 should be displayed")
+    public void checkTheShouldBeDisplayed4(String success) {
+        explicitlyWait(succesmsj2, VISIBLE,10);
+        Assert.assertEquals(success,getElement(succesmsj2).getText());
+
+    }
     @And("{int} seconds wait")
     public void secondssWait(int seconds) {
         secondsWait(seconds);

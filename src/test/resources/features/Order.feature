@@ -59,6 +59,10 @@ Feature: Order
     And <num3> seconds wait
     And Scroll <num1>
     And Click to view basket
+    And 1 seconds wait
+    And Click removefourth button
+    And 1 seconds wait
+    And Check the "You have no items in your shopping cart.Click here to continue shopping." for success 2 should be displayed
     Then <second> seconds wait
 
     Examples:
@@ -94,6 +98,8 @@ Feature: Order
     And <2seconds> seconds wait
     And Check the "Nona Fitness Tank was updated in your shopping cart." for success should be displayed
     And Click removefourth button
+    And <second> seconds wait
+    And Check the "You have no items in your shopping cart.Click here to continue shopping." for success 2 should be displayed
     Then <second> seconds wait
 
     Examples:
