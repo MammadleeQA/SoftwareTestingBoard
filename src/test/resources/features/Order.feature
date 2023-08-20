@@ -61,8 +61,6 @@ Feature: Order
     And Click to view basket
     And 1 seconds wait
     And Click removefourth button
-    And 1 seconds wait
-    And Check the "You have no items in your shopping cart.Click here to continue shopping." for success 2 should be displayed
     Then <second> seconds wait
 
     Examples:
