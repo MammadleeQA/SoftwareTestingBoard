@@ -31,6 +31,7 @@ Feature: Order
     And Click second picture
     And Scroll 250
     And Select "<colour>" colour
+    And 1 seconds wait
     And Click to button add to cart
     And 3 seconds wait
     Then Check the "This is a required field." for colour should be displayed
@@ -48,15 +49,18 @@ Feature: Order
     And Scroll <num>
     And Click third picture
     And Scroll <num1>
-    And Select "<colour>" colour
     And Select "<size>" size
+    And Select "<colour>" colour
     And Click to button add to cart
+    And <2seconds> seconds wait
     And Scroll <num2>
     And Click to basket
     And <num3> seconds wait
-    And Click to viewbasket
-    And <seconds> seconds wait
+    And Click to view basket
+    Then <second> seconds wait
 
     Examples:
-      | num | num1 | colour   | size  | seconds | num2 | num3|
-      | 350 | 230  | blue     |   M   |    3    | -350 |  2  |
+    | num | num1 | colour   | size  | second  | num2 | num3| 2seconds|
+    | 350 | 230  | blue     |   M   |    1    | -250 |  1  |     2   |
+    | 350 | 230  | green    |   XL  |    1    | -250 |  1  |     2   |
+    | 350 | 230  | purple   |   L   |    1    | -250 |  1  |     2   |

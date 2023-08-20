@@ -52,14 +52,15 @@ Feature: Order
     And Select "<size>" size
     And Select "<colour>" colour
     And Click to button add to cart
+    And <2seconds> seconds wait
     And Scroll <num2>
     And Click to basket
     And <num3> seconds wait
     And Click to view basket
-    Then <seconds> seconds wait
+    Then <second> seconds wait
 
     Examples:
-    | num | num1 | colour   | size  | seconds | num2 | num3|
-    | 350 | 230  | blue     |   M   |    3    | -250 |  2  |
-    | 350 | 230  | green    |   XL  |    3    | -250 |  2  |
-    | 350 | 230  | purple   |   L   |    3    | -250 |  2  |
+    | num | num1 | colour   | size  | second  | num2 | num3| 2seconds|
+    | 350 | 230  | blue     |   M   |    1    | -250 |  1  |     2   |
+    | 350 | 230  | green    |   XL  |    1    | -250 |  1  |     2   |
+    | 350 | 230  | purple   |   L   |    1    | -250 |  1  |     2   |
