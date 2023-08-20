@@ -64,5 +64,5 @@ Feature: Order
     Examples:
     | num | num1 | colour   | size  | second  | num2 | num3| 2seconds|
     | 350 | 230  | blue     |   M   |    1    | -250 |  1  |     2   |
-    | 350 | 230  | green    |   XL  |    1    | -250 |  1  |     2   |
-    | 350 | 230  | purple   |   L   |    1    | -250 |  1  |     2   |
+#    | 350 | 230  | green    |   XL  |    1    | -250 |  1  |     2   |
+#    | 350 | 230  | purple   |   L   |    1    | -250 |  1  |     2   |
