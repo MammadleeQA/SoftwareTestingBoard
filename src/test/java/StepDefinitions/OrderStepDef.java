@@ -35,6 +35,11 @@ public class OrderStepDef extends BaseMethods {
         explicitlyWait(tops, CLICKABLE,10);
         getElement(tops).click();
     }
+    @Then("Click women's tops button")
+    public void womentopsclick(){
+        explicitlyWait(tops, CLICKABLE,10);
+        getElement(tops).click();
+    }
     @Then("Click women's jackets button")
     public void womenjacketsclick(){
         explicitlyWait(jackets, CLICKABLE,10);
@@ -45,6 +50,21 @@ public class OrderStepDef extends BaseMethods {
         explicitlyWait(firststpic, CLICKABLE,10);
         getElement(firststpic).click();
     }
+    @And("Click updatefourth button")
+    public void updatefour(){
+        explicitlyWait(updatefourth, CLICKABLE,10);
+        getElement(updatefourth).click();
+    }
+    @And("Click removefourth button")
+    public void removefour(){
+        explicitlyWait(removefourth, CLICKABLE,10);
+        getElement(removefourth).click();
+    }
+    @And("Click update cart button")
+    public void updatecart(){
+        explicitlyWait(updatcart, CLICKABLE,10);
+        getElement(updatcart).click();
+    }
     @And("Click second picture")
     public void menspic2(){
         explicitlyWait(secondpic, CLICKABLE,10);
@@ -54,6 +74,11 @@ public class OrderStepDef extends BaseMethods {
     public void womenthird(){
         explicitlyWait(thirdpic, CLICKABLE,10);
         getElement(thirdpic).click();
+    }
+    @And("Click fourth picture")
+    public void womenfourth(){
+        explicitlyWait(fourthpic, CLICKABLE,10);
+        getElement(fourthpic).click();
     }
     @And("Click to button add to cart")
     public void sizes(){

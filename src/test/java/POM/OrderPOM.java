@@ -9,6 +9,8 @@ public class OrderPOM {
     public static final By tops = By.xpath("(//a[text()='Tops'])");
     public static final By jackets = By.xpath("(//a[text()='Jackets'])");
     public static final By firststpic =By.cssSelector("img[src='https://magento.softwaretestingboard.com/pub/media/catalog/product/cache/7c4c1ed835fbbf2269f24539582c6d44/m/t/mt03-red_main_1.jpg']");
+    public static final By fourthpic =By.cssSelector("img[src='https://magento.softwaretestingboard.com/pub/media/catalog/product/cache/7c4c1ed835fbbf2269f24539582c6d44/w/t/wt04-blue_main_1.jpg']");
+
     public static final By secondpic =By.cssSelector("img[src='https://magento.softwaretestingboard.com/pub/media/catalog/product/cache/7c4c1ed835fbbf2269f24539582c6d44/m/t/mt02-white_main_2.jpg']");
     public static final By thirdpic =By.cssSelector("img[src='https://magento.softwaretestingboard.com/pub/media/catalog/product/cache/7c4c1ed835fbbf2269f24539582c6d44/w/j/wj06-purple_main_1.jpg']");
 
@@ -29,6 +31,11 @@ public class OrderPOM {
     public static final By basket = By.cssSelector("a[href='https://magento.softwaretestingboard.com/checkout/cart/']");
     public static final By viewbasket = By.xpath("(//span[text()='View and Edit Cart'])");
     public static final By succesmsj = By.cssSelector("div[data-bind=\"html: $parent.prepareMessageForHtml(message.text)\"]");
+//    public static final By updatefourth = By.xpath("(//span[text()='Edit'])");
+    public static final By updatcart = By.xpath("(//span[text()='Update Cart'])");
+    public static final By updatefourth = By.xpath("//a[@class='action action-edit' and @title='Edit item parameters']");
+    public static final By removefourth = By.xpath("//a[@class='action action-delete' and @title='Remove item']");
+
 
 
 

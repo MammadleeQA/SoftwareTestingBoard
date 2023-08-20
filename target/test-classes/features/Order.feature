@@ -64,5 +64,40 @@ Feature: Order
     Examples:
     | num | num1 | colour   | size  | second  | num2 | num3| 2seconds|
     | 350 | 230  | blue     |   M   |    1    | -250 |  1  |     2   |
-#    | 350 | 230  | green    |   XL  |    1    | -250 |  1  |     2   |
-#    | 350 | 230  | purple   |   L   |    1    | -250 |  1  |     2   |
+    | 350 | 230  | green    |   XL  |    1    | -250 |  1  |     2   |
+    | 350 | 230  | purple   |   L   |    1    | -250 |  1  |     2   |
+
+  Scenario Outline: Trying update selected item
+    Given I am in maestro page
+    When Click women button
+    Then Click women's tops button
+    And Scroll <num>
+    And Click fourth picture
+    And Scroll <num1>
+    And Select "<size>" size
+    And Select "<colour>" colour
+    And Click to button add to cart
+    And <2seconds> seconds wait
+    And Check the "You added Nona Fitness Tank to your shopping cart." for success should be displayed
+    And Scroll <num2>
+    And Click to basket
+    And <num3> seconds wait
+    And Scroll <num1>
+    And Click to view basket
+    And Scroll <num4>
+    And Click updatefourth button
+    And <second> seconds wait
+    And Scroll <num1>
+    And Select "<size2>" size
+    And Select "<colour2>" colour
+    And Click update cart button
+    And <2seconds> seconds wait
+    And Check the "Nona Fitness Tank was updated in your shopping cart." for success should be displayed
+    And Click removefourth button
+    Then <second> seconds wait
+
+    Examples:
+      | num | num1 | colour   | size  | second  | num2 | num3| 2seconds|  size2  |   colour2  |  num4  |
+      | 750 | 230  | blue     |   M   |    1    | -250 |  1  |     2   |     L   |    purple  |   100  |
+      | 750 | 230  | red      |   XL  |    1    | -250 |  1  |     2   |     S   |    blue    |   300  |
+      | 750 | 230  | purple   |   S   |    1    | -250 |  1  |     2   |     M   |    red     |   500  |
