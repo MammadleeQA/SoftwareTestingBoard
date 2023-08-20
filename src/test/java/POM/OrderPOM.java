@@ -28,7 +28,7 @@ public class OrderPOM {
     public static final By purple = By.cssSelector("div[option-label='Purple']");
     public static final By basket = By.cssSelector("a[href='https://magento.softwaretestingboard.com/checkout/cart/']");
     public static final By viewbasket = By.xpath("(//span[text()='View and Edit Cart'])");
-    public static final By succesmsj = By.cssSelector("a[href='https://magento.softwaretestingboard.com/checkout/cart/']");
+    public static final By succesmsj = By.cssSelector("div[data-bind=\"html: $parent.prepareMessageForHtml(message.text)\"]");
 
 
 

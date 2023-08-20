@@ -53,9 +53,11 @@ Feature: Order
     And Select "<colour>" colour
     And Click to button add to cart
     And <2seconds> seconds wait
+    And Check the "You added Juno Jacket to your shopping cart." for success should be displayed
     And Scroll <num2>
     And Click to basket
     And <num3> seconds wait
+    And Scroll <num1>
     And Click to view basket
     Then <second> seconds wait
 
