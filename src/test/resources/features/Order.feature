@@ -42,54 +42,54 @@ Feature: Order
       | when colour is blue  | gray   |
 
 
-  Scenario Outline: Trying add to card item with selected colour and selected size
+  Scenario Outline: Trying add to card item with selected colour and selected size and then remove all items one by one
     Given I am in maestro page
     When Click women button
-    Then Click women's jackets button
-    And Scroll <num>
+    And Click women's jackets button
+    And Scroll <Number>
     And Click third picture
-    And Scroll <num1>
+    And Scroll <FirstNumber>
     And Select "<size>" size
     And Select "<colour>" colour
     And Click to button add to cart
     And <2seconds> seconds wait
     And Check the "You added Juno Jacket to your shopping cart." for success should be displayed
-    And Scroll <num2>
+    And Scroll <SecondNumber>
     And Click to basket
-    And <num3> seconds wait
-    And Scroll <num1>
+    And <ThirdNumber> seconds wait
+    And Scroll <FirstNumber>
     And Click to view basket
-    And 1 seconds wait
-    And Click removefourth button
-    Then <second> seconds wait
+    And <second> seconds wait
+    And Click <FifthNumber> removeall button
+
 
     Examples:
-    | num | num1 | colour   | size  | second  | num2 | num3| 2seconds|
-    | 350 | 230  | blue     |   M   |    1    | -250 |  1  |     2   |
-    | 350 | 230  | green    |   XL  |    1    | -250 |  1  |     2   |
-    | 350 | 230  | purple   |   L   |    1    | -250 |  1  |     2   |
+    | Number | FirstNumber | colour   | size  | second  | SecondNumber | ThirdNumber| 2seconds|   FifthNumber |
+    |   350  |     230     | blue     |   M   |    1    |     -250     |      1     |     2   |       0       |
+    |   350  |     230     | green    |   XL  |    1    |     -250     |      1     |     2   |       0       |
+    |   350  |     230     | purple   |   L   |    1    |     -250     |      1     |     2   |       1       |
 
-  Scenario Outline: Trying update selected item
+  Scenario Outline: Trying update selected item and then remove that item
     Given I am in maestro page
     When Click women button
     Then Click women's tops button
-    And Scroll <num>
+    And Scroll <Number>
     And Click fourth picture
-    And Scroll <num1>
+    And Scroll <FirstNumber>
     And Select "<size>" size
     And Select "<colour>" colour
     And Click to button add to cart
     And <2seconds> seconds wait
     And Check the "You added Nona Fitness Tank to your shopping cart." for success should be displayed
-    And Scroll <num2>
+    And Scroll <SecondNumber>
     And Click to basket
-    And <num3> seconds wait
-    And Scroll <num1>
+    And <ThirdNumber> seconds wait
+    And Scroll <FirstNumber>
     And Click to view basket
-    And Scroll <num4>
+    And Scroll <FourthNumber>
     And Click updatefourth button
     And <second> seconds wait
-    And Scroll <num1>
+    And Scroll <FirstNumber>
     And Select "<size2>" size
     And Select "<colour2>" colour
     And Click update cart button
@@ -97,11 +97,10 @@ Feature: Order
     And Check the "Nona Fitness Tank was updated in your shopping cart." for success should be displayed
     And Click removefourth button
     And <second> seconds wait
-    And Check the "You have no items in your shopping cart.Click here to continue shopping." for success 2 should be displayed
-    Then <second> seconds wait
+    And Check the "You have no items in your shopping cart." for success 2 should be displayed
 
     Examples:
-      | num | num1 | colour   | size  | second  | num2 | num3| 2seconds|  size2  |   colour2  |  num4  |
-      | 750 | 230  | blue     |   M   |    1    | -250 |  1  |     2   |     L   |    purple  |   100  |
-      | 750 | 230  | red      |   XL  |    1    | -250 |  1  |     2   |     S   |    blue    |   100  |
-      | 750 | 230  | purple   |   S   |    1    | -250 |  1  |     2   |     M   |    red     |   100  |
+      | Number | FirstNumber | colour   | size  | second  | SecondNumber | ThirdNumber| 2seconds|  size2  |   colour2  |  FourthNumber  |
+      |   750  |     230     | blue     |   M   |    1    |     -250     |      1     |     2   |     L   |    purple  |       100      |
+      |   750  |     230     | red      |   XL  |    1    |     -250     |      1     |     2   |     S   |    blue    |       100      |
+      |   750  |     230     | purple   |   S   |    1    |     -250     |      1     |     2   |     M   |    red     |       100      |

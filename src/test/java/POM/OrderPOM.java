@@ -34,7 +34,7 @@ public class OrderPOM {
     public static final By updatcart = By.xpath("(//span[text()='Update Cart'])");
     public static final By updatefourth = By.xpath("//a[@class='action action-edit' and @title='Edit item parameters']");
     public static final By removefourth = By.xpath("//a[@class='action action-delete' and @title='Remove item']");
-    public static final By succesmsj2 = By.cssSelector("div[class='cart-empty']");
+    public static final By succesmsj2 = By.xpath("(//p[text()='You have no items in your shopping cart.'])");;
 
 
 

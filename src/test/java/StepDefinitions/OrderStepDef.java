@@ -60,6 +60,18 @@ public class OrderStepDef extends BaseMethods {
         explicitlyWait(removefourth, CLICKABLE,10);
         getElement(removefourth).click();
     }
+    @And("Click {int} removeall button")
+    public void removeal(int a){
+        if(a==1){
+        explicitlyWait(removefourth, CLICKABLE,10);
+        getElement(removefourth).click();
+        secondsWait(2);
+        explicitlyWait(removefourth, CLICKABLE,10);
+        getElement(removefourth).click();
+        secondsWait(2);
+        explicitlyWait(removefourth, CLICKABLE,10);
+        getElement(removefourth).click();}
+    }
     @And("Click update cart button")
     public void updatecart(){
         explicitlyWait(updatcart, CLICKABLE,10);
