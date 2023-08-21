@@ -60,7 +60,7 @@ Feature: Order
     And Scroll <FirstNumber>
     And Click to view basket
     And <second> seconds wait
-    And Click <FifthNumber> removeall button
+    Then Click <FifthNumber> removeall button and checking "You have no items in your shopping cart." msj
 
 
     Examples:
@@ -97,7 +97,7 @@ Feature: Order
     And Check the "Nona Fitness Tank was updated in your shopping cart." for success should be displayed
     And Click removefourth button
     And <second> seconds wait
-    And Check the "You have no items in your shopping cart." for success 2 should be displayed
+    Then Check the "You have no items in your shopping cart." for success 2 should be displayed
 
     Examples:
       | Number | FirstNumber | colour   | size  | second  | SecondNumber | ThirdNumber| 2seconds|  size2  |   colour2  |  FourthNumber  |
