@@ -1,4 +1,4 @@
-Feature: MWL
+Feature: WishList
 
   Background:
     Given Go to "https://magento.softwaretestingboard.com/" page

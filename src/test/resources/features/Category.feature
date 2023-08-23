@@ -1,4 +1,4 @@
-Feature: CATEGORY
+Feature: Category
 
   Background:
     Given Go to "https://magento.softwaretestingboard.com/" page

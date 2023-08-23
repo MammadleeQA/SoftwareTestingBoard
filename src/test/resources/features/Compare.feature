@@ -1,4 +1,4 @@
-Feature: CP
+Feature: Compare
 
   Background:
     Given Go to "https://magento.softwaretestingboard.com/" page
