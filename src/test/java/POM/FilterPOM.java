@@ -11,8 +11,6 @@ public class FilterPOM {
     public static final By FIRST_ITEM_LINK = By.xpath("(//a[@class='product-item-link'][1])");
     public static final By GRID_SWITCHER = By.xpath("(//a[@class='modes-mode mode-grid'])[1]");
     public static final By LIST_SWITCHER = By.xpath("(//a[@class='modes-mode mode-list'])[1]");
-   // public static final By TOOLBAR_AMOUNT = By.xpath("(//p[@id='toolbar-amount'])[1]");
-    public static final By TOOLBAR_FIRST_NUMBER = By.xpath("(//span[@class='toolbar-number'])[1]");
     public static final By TOOLBAR_LAST_NUMBER = By.xpath("(//span[@class='toolbar-number'])[2]");
     public static final By LISTED_PRODUCTS_COUNT = By.xpath("//span[@class='toolbar-number'][3]");
     public static final By FIRST_ITEM = By.xpath("(//div[@class='price-box price-final_price'])[1]");
