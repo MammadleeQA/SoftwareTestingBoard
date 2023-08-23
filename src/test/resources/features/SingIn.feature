@@ -17,7 +17,6 @@ Feature: User Sign-In
   Scenario: Sign-In with blank email and password fields
     Given the user is on the sign-in page
     When the user leaves the email and password fields blank
-    And clicks the Sign In button
     Then the user should see error messages for both email and password fields
 
   Scenario: Sign-In with blank email field

@@ -10,6 +10,9 @@ import POM.SingInPOM;
 import POM.RegisterPOM;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 
 import static DriverHook.DriverConfig.driver;
 import static org.junit.Assert.assertNotNull;
@@ -32,7 +35,7 @@ public class SignInStepDef extends BaseMethods {
         passwordInput.sendKeys("Parol-123" );
     }
 
-    @When("clicks the \"Sign In\" button")
+    @When("the user leaves the email and password fields blank")
     public void clickSignInButton() {
         WebElement signInButton = driver.findElement(SingInPOM.SIGN_IN_BUTTON);
         signInButton.click();
@@ -44,6 +47,13 @@ public class SignInStepDef extends BaseMethods {
 
         emailInput.sendKeys("invalid@example.com");
         passwordInput.sendKeys("invalidPassword");
+    }
+
+
+    @When("the user leaves the email and password fields blank")
+    public void leaveBlankEmailAndPassword() {
+        WebElement signInButton = driver.findElement(SingInPOM.SIGN_IN_BUTTON);
+        signInButton.click();
     }
     @And("clicks the Sign In button")
     public void clickSignInButtonn() {
@@ -62,6 +72,15 @@ public class SignInStepDef extends BaseMethods {
         WebElement errorMessage = driver.findElement(SingInPOM.INVALID_SIGN_IN_MESSAGE);
 
         assertTrue(errorMessage.getText().contains("The account sign-in was incorrect or your account is disabled temporarily. Please wait and try again later."));
+    }
+    @Then("the user should see error messages for both email and password fields")
+    public void verifyErrorMessagesForBlankFields() {
+
+        WebElement emailError = driver.findElement(SingInPOM.EMAIL_ERROR);
+        WebElement passwordError = driver.findElement(SingInPOM.PASSWORD_ERROR);
+
+        assertTrue(emailError.isDisplayed());
+        assertTrue(passwordError.isDisplayed());
     }
 }
 
