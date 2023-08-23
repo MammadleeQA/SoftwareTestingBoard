@@ -2,6 +2,14 @@ package StepDefinitions;
 
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
+import io.cucumber.java.en.Then;
+import org.junit.Assert;
+import org.openqa.selenium.WebElement;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 import static DriverHook.DriverConfig.driver;
 import static POM.ConditionOptionEnum.*;
@@ -125,7 +133,7 @@ public class FilterStepDef extends BaseMethods {
 
         secondsWait(2);
 
-        List <WebElement> elements = getElements(PRODUCT_ITEMS_PRICES);
+        List<WebElement> elements = getElements(PRODUCT_ITEMS_PRICES);
         List<Double> productItemsPrices_List = new ArrayList<>();
 
         int max = 0;
